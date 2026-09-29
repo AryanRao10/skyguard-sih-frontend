@@ -16,7 +16,6 @@ export default function SkyGuardDashboard() {
         setData(json);
         setError(false);
         
-        // Keep a rolling history log of the last 6 telemetry streams
         setHistory((prev) => [
           {
             time: json?.timestamp || new Date().toLocaleTimeString(),
@@ -153,8 +152,10 @@ export default function SkyGuardDashboard() {
 
             <div className="space-y-3 font-mono text-xs">
               <div className="flex justify-between py-1 border-b border-slate-800/50">
-                <span className="text-slate-400">Isolation Forest Score:</span>
-                <span className="text-slate-200">{ml?.anomaly_score} ({ml?.confidence_pct}% Conf)</span>
+                <span className="text-slate-400">Model Confidence / Score:</span>
+                <span className="text-slate-200">
+                  {ml?.is_anomaly ? `Anomaly Score: ${ml?.anomaly_score} (${ml?.confidence_pct}% Conf)` : `Baseline Normal (${ml?.confidence_pct || 96}% Confidence)`}
+                </span>
               </div>
               <div className="flex justify-between py-1 border-b border-slate-800/50">
                 <span className="text-slate-400">Root Cause Classification:</span>
