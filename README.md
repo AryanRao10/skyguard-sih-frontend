@@ -1,36 +1,25 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SkyGuard AI - Frontend Dashboard
 
-## Getting Started
+Official frontend web interface for **SkyGuard AI**, developed for Smart India Hackathon (SIH 2026) under Problem Statement **SIH26073** (AI/ML-Based Intelligent Anomaly Detection for Automatic Weather Stations).
 
-First, run the development server:
+## 🚀 Overview
+The SkyGuard AI Frontend is a high-performance, real-time analytics dashboard built with **Next.js**, **React**, and **Tailwind CSS**. It connects directly to our live cloud-hosted backend engine to visualize automated weather station (AWS) telemetry, live anomaly flags, spatial verification audits, Explainable AI (SHAP) feature weights, and self-healing data imputations.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Tech Stack & Libraries
+* **Framework:** Next.js (App Router), React
+* **Styling:** Tailwind CSS, Lucide Icons
+* **Deployment:** Vercel (Production Cloud Hosting)
+* **Backend Integration:** REST API polling via FastAPI (Render Cloud)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📊 Core Dashboard Features
+1. **Live Telemetry Stream:** Real-time monitoring of Temperature (°C), Barometric Pressure (hPa), and Relative Humidity (%) with automated polling loops.
+2. **Anomaly & Spatial Diagnostics:** Instant visual alerts for hardware sensor spikes, accompanied by a 15km spatial cross-check to separate sensor errors from regional weather events.
+3. **Explainable AI (SHAP) Visualizer:** Dynamic progress bars quantifying exact metric responsibility during anomaly scoring.
+4. **Self-Healing Data Interception:** Live simulation display showing corrupted raw inputs being replaced by SciPy-reconstructed proxy values.
+5. **Stream Audit History:** A rolling historical table logging recent telemetry streams, system states, and root-cause classifications.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
